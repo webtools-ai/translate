@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リアルタイム音声翻訳</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>リアルタイム音声翻訳</h1>
+        
+        <div class="language-controls">
+            <div class="language-select">
+                <label for="sourceLanguage">話す言語:</label>
+                <select id="sourceLanguage"></select>
+            </div>
+            
+            <div class="language-select">
+                <label for="targetLanguage">翻訳後の言語:</label>
+                <select id="targetLanguage"></select>
+            </div>
+        </div>
+
+        <div class="translation-box">
+            <div class="text-box">
+                <h2>認識した音声</h2>
+                <div id="source-text" class="text-content"></div>
+            </div>
+            <div class="text-box">
+                <h2>翻訳結果</h2>
+                <div id="target-text" class="text-content"></div>
+            </div>
+        </div>
+
+        <div class="control-buttons">
+            <button id="startButton" class="button">
+                <span class="icon">🎤</span>
+                話し始める
+            </button>
+            <button id="stopButton" class="button" disabled>
+                <span class="icon">⏹</span>
+                終了する
+            </button>
+        </div>
+
+        <div id="status" class="status-message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
